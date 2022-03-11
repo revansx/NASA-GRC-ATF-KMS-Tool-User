@@ -1,0 +1,16 @@
+{| class="zTblUser sortable" id=zTblUser{{#counter:zTblSystemCount}}
+! #
+! System
+! NASA Owner
+! TFOME Lead
+! TFOME EoR {{#info:Engineer of Record|note}}
+! # Hazards
+! # Countermeasures
+! # Unverified CMs
+! # Nonconformances
+<noinclude>
+|-
+|
+|}
+{{zToolCheck|Tool - User}}
+</noinclude>

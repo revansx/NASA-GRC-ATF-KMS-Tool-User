@@ -1,0 +1,11 @@
+{| class="zTblLeaderboard sortable" id=zTblLeaderboard{{#counter:zTblLeaderboardCount}}
+! Rank
+! User
+! Badges Earned
+|-
+<noinclude>
+| ...
+|}
+</noinclude><noinclude>
+{{zToolCheck|Tool - User}}
+</noinclude>

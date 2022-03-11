@@ -1,0 +1,381 @@
+<includeonly><div style="display:none;visibility:hidden;">
+{{#get_ldap_data:domain=NDC
+  |filter=(agencyUID={{#vardefineecho:useris|{{PAGENAME}} }})
+  |data=
+    mail=mail,
+    title=title,
+    nasaorgcode=nasaorgcode,
+    ou=ou,
+    displayname=displayname,
+    ipphone=ipphone,
+    postaladdress=postaladdress,
+    cn=cn,
+    nasamailstop=nasamailstop,
+    nasaemployer=nasaemployer,
+    nasaidentitystatus=nasaidentitystatus,
+    nasauscitizen=nasauscitizen,
+    givenname=givenname,
+    sn=sn,
+    employeenumber=employeenumber,
+    nasabuilding=nasabuilding,
+    roomnumber=roomnumber,
+    nasalevelofconfidence=nasalevelofconfidence,
+    mobile=mobile,
+    nasasupervisor=nasasupervisor,
+    facsimiletelephonenumber=facsimiletelephonenumber
+}}
+* [[UserLN::{{#vardefineecho:UserLN|{{#iferror:{{#external_value:cn}}{{#external_value:sn}}|{{PAGENAME}}|{{#sub:{{#external_value:cn}}|0|1}}.{{ucfirst:{{lc:{{#external_value:sn}}}}}}}}}}]]
+* [[UserNL::{{#vardefineecho:UserNL|{{#iferror:{{#external_value:cn}}{{#external_value:sn}}|{{PAGENAME}}|{{ucfirst:{{lc:{{#external_value:sn}}}}}}.{{#sub:{{#external_value:cn}}|0|1}}}}}}]]
+* [[UserUsername::{{#vardefineecho:UserUsername|{{#iferror:{{#external_value:useris}}|{{PAGENAME}}|{{#var:useris}}}}}}]]
+* [[UserWorkEmail::{{#vardefineecho:UserWorkEmail|{{#iferror:{{#external_value:mail}}|inactiveuser@nasa.gov|{{#external_value:mail}}}}}}]]
+* [[UserDisplayName::{{#vardefineecho:UserDisplayName|{{#replace:{{#replace:{{#iferror:{{#external_value:displayname}}|{{PAGENAME}}|{{#external_value:displayname}}}}|[|(}}|]|)}}}}]]
+* [[UserFullName::{{#vardefineecho:UserFullName|{{#replace:{{#replace:{{#replace:{{#iferror:{{#external_value:displayname}}|{{PAGENAME}}|{{#external_value:displayname}}}}|,|_}}|[|(}}|]|)}}}}]]
+* [[UserWorkPhone::{{#vardefineecho:UserWorkPhone|{{#iferror:{{#external_value:ipphone}}
+                                                    | +1-419-621-3344
+                                                    | {{#if:{{#external_value:ipphone}}
+                                                       | {{#external_value:ipphone}}
+                                                       | +1-419-621-3344
+                                                      }} 
+                                                  }} 
+                   }}]]
+* [[UserWorkAddr::{{#vardefineecho:UserWorkAddr|{{#iferror:{{#external_value:postaladdress}}|No Addr|{{#replace:{{#external_value:postaladdress}}|&|,}} }} }}]]
+* [[UserWorkMS::{{#vardefineecho:UserWorkMS|{{#iferror:{{#external_value:nasamailstop}}|No MS|{{#external_value:nasamailstop}}}}}}]]
+* [[UserWorkCN::{{#vardefineecho:UserWorkCN|{{#iferror:{{#external_value:cn}}|No CN|{{#external_value:cn}}}}}}]]
+* [[UserWorkCenter::{{#vardefineecho:UserWorkCenter|{{#iferror:{{#external_value:ou}}|Work Center Unknown|{{#external_value:ou}}}}}}]]
+* [[UserWorkCo::{{#vardefineecho:UserWorkCo|{{#iferror:{{#external_value:nasaemployer}}|Company Unknown|{{#external_value:nasaemployer}}}}}}]]
+* [[UserWorkTitle::{{#vardefineecho:UserWorkTitle|{{#iferror:{{#external_value:title}}|Title Unknown|{{#external_value:title}}}}}}]]
+* [[User Title::{{{User Title|No Title}}}]]
+* [[UserIdentityStatus::{{#vardefineecho:UserIdentityStatus|{{#iferror:{{#external_value:nasaidentitystatus}}|Status Unknown|{{#external_value:nasaidentitystatus}}}}}}]]
+* [[UserIsUSCitizen::{{#vardefineecho:UserIsUSCitizen|{{#iferror:{{#external_value:nasauscitizen}}|Citizenry Unknown|{{#external_value:nasauscitizen}}}}}}]]
+* [[UserGivenName::{{#vardefineecho:UserGivenName|{{#iferror:{{#external_value:givenname}}|No Given Name|{{#external_value:givenname}}}}}}]]
+* [[UserSN::{{#vardefineecho:UserSN|{{#iferror:{{#external_value:sn}}|{{PAGENAME}}|{{#external_value:sn}}}}}}]]
+* [[UserEMPLOYEENUMBER::{{#vardefineecho:UserEMPLOYEENUMBER|{{#iferror:{{#external_value:employeenumber}}|No User ID|{{#external_value:employeenumber}}}}}}]]
+* [[UserWorkBldg::{{#vardefineecho:UserWorkBldg|{{#iferror:{{#external_value:nasabuilding}}|No Building|{{#external_value:nasabuilding}}}}}}]]
+* [[UserWorkRoom::{{#vardefineecho:UserWorkRoom|{{#iferror:{{#external_value:roomnumber}}|No Room|{{#external_value:roomnumber}}}}}}]]
+* [[UserWorkOrgCode::{{#vardefineecho:UserWorkOrgCode|{{#iferror:{{#external_value:nasaorgcode}}|No Org Code|{{#external_value:nasaorgcode}}}}}}]]
+* [[UserWorkOrg::{{#vardefineecho:UserWorkOrg|{{#sub:{{#var:UserWorkOrgCode}}|0|1}}}}]]
+* [[UserWorkOrg1::{{#vardefineecho:UserWorkOrg1|{{#sub:{{#var:UserWorkOrgCode}}|0|1}}}}]]
+* [[UserWorkOrg2::{{#vardefineecho:UserWorkOrg2|{{#sub:{{#var:UserWorkOrgCode}}|0|2}}}}]]
+* [[UserWorkOrg3::{{#vardefineecho:UserWorkOrg3|{{#sub:{{#var:UserWorkOrgCode}}|0|3}}}}]]
+* [[UserFaxNumber::{{#vardefineecho:UserFaxNumber|{{#iferror:{{#external_value:facsimiletelephonenumber}}|No Fax Number|{{#if:{{#external_value:facsimiletelephonenumber}}|{{#external_value:facsimiletelephonenumber}}|No Fax}}}}}}]]
+* [[UserConfidenceLevel::{{#vardefineecho:UserConfidenceLevel|{{#iferror:{{#external_value:nasalevelofconfidence}}|No Confidence Level|{{#external_value:nasalevelofconfidence}}}}}}]]
+* [[UserCellPhone::{{#vardefineecho:UserCellPhone|{{#iferror:{{#external_value:mobile}}|No Cell Phone|{{#if:{{#external_value:mobile}}|{{#external_value:mobile}}|No Cell}}}}}}]]
+* [[UserSupervisorID::{{#vardefineecho:UserSupervisorID||{{#iferror:{{#external_value:nasasupervisor}}|No Supervisor ID|{{#external_value:nasasupervisor}}}}}}]]
+* [[UserFullOrgCode::{{#vardefineecho:UserFullOrgCode|{{#var:UserWorkCenter}}-{{#var:UserWorkOrgCode}}}}]]
+* [[zNullEdit::{{{zNullEdit|}}}]]
+{{DISPLAYTITLE:{{#ifeq:{{PAGENAME}}|{{#var:UserNL}}|({{PAGENAME}})|{{#var:UserNL}}}}}}
+</div>
+<div class="zBlurb {{#if:{{{User Quote|}}}||HideMe}}" style="color:#666;font-family:x;">'''''&quot;{{{User Quote|}}}&quot;'''''</div>
+= User Details =
+UUPIC: {{#var:UserEMPLOYEENUMBER}} | ROLE: {{#var:UserWorkTitle}} | STATUS: {{#var:UserIdentityStatus}} | US CITIZEN: {{#var:UserIsUSCitizen}} | EMPLOYER: {{#var:UserWorkCo}} | USER TITLE: {{{User Title|No Title}}}
+<div style="float:right;">
+{{#autoedit:form=User
+      |target={{FULLPAGENAME}}
+      |link type=button
+      |link text=Update user information from NDC
+      |query string=User[UserNL]={{#var:UserNL}}&User[UserUsername]={{#var:UserUsername}}&User[UserWorkTitle]={{#var:UserWorkTitle}}&User[UserWorkOrgCode]={{#var:UserWorkOrgCode}}&User[UserWorkCenter]={{#var:UserWorkCenter}}&User[UserWorkCo]={{#var:UserWorkCo}}&User[zNullEdit]=X|reload
+}}
+</div>
+{| 
+| style="padding:12px 0px 12px 28px; border:1px solid #ccc; margin-bottom:12px; min-width:500px;" |
+{| style="width:100%;"
+ | style="vertical-align: bottom; line-height: 2em; white-space:nowrap;" | {{#switch:{{#var:UserWorkCo}}
+|NASA=National Aeronautics and Space Administration
+|{{#var:UserWorkCo}}
+}}<br/>'''<big>{{#var:UserWorkCN}} ({{#var:UserWorkCenter}}-{{#var:UserWorkOrgCode}})</big>'''
+ | style="width:80px;" | [[File:Company-Logo-{{#var:UserWorkCo}}.png|link=Main Page|80px]] 
+ |-
+ | {{#var:UserWorkTitle}}
+ | 
+ |-
+ | {{#switch:{{#var:UserFullOrgCode}}
+     | GRC-H000=Neil A. Armstrong Test Facility
+     |
+   }}
+ |
+ |-
+ | style="padding-top:8px;" | '''{{#switch:{{#var:UserWorkCenter}}
+                                   |GRC=Glenn Research Center
+                                   |{{#var:UserWorkCenter}}
+                                 }}'''
+ |
+ |- {{#arraydefine:UserWorkAddrParts|{{#var:UserWorkAddr}}|$}}
+ | {{#arrayindex:UserWorkAddrParts|0|ERROR}}, Mail Stop {{#var:UserWorkMS}} ({{#var:UserWorkBldg}}:{{#var:UserWorkRoom}})
+ |
+ |-
+ | {{#arrayindex:UserWorkAddrParts|1|ERROR}}
+ |
+ |-
+ | style="padding-top:8px;" | {{#var:UserWorkPhone}} (w)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{#var:UserCellPhone}} (c)
+ |
+ |-
+ | {{#var:UserFaxNumber}} (f)
+ |
+ |-
+ | [mailto://{{#var:UserWorkEmail}} {{#var:UserWorkEmail}}]
+ | style="" | '''<small>[https://www.nasa.gov www.nasa.gov]</small>'''
+|}
+|}
+{{H1|Badges for [[{{FULLPAGENAME}}]]}}
+<div class=zBlurb>{{#ask:[[Category:User]]|?User Badge Number=|sort=User Badge Number|order=DESC|limit=1|link=none|searchlabel=|format=template|template=Wiki Highest Honor|userparam={{FULLPAGENAME}}}}</div>
+{{Wiki Badge|🆕|Page Producing|{{#ask:[[Page creator::{{FULLPAGENAME}}]]|format=count}}|1000|500|250|100|10|page creations}}
+{{Wiki Badge|🎬|Action Closing|{{#ask:[[Category:Actionable]][[Action status::Closed]][[Assigned to::{{FULLPAGENAME}}]]|format=count}}|1000|500|250|100|10|assigned actions closed}}
+{{Wiki Badge|🦸‍♂️|Kudos Earning|{{#ask:[[Category:Kudos]][[Relates to Users::{{FULLPAGENAME}}]]|format=count}}|250|100|25|5|1|kudos earned}}
+{{Wiki Badge|📧|Notification Sending|{{#ask:[[Category:Wiki Notification]][[Page creator::{{FULLPAGENAME}}]]|format=count}}|1000|500|250|100|10|notifications sent}}
+{{Wiki Badge|🛠|NC Dispositioning|{{#ask:[[Category:Facility Nonconformance]][[Has Disposition Status::Dispositioned]][[Page author::{{FULLPAGENAME}}]]|format=count}}|50|25|10|5|1|NCs they worked on dispositioned}}
+{{Wiki Badge|👩‍💼|MOC Approving|{{#ask:[[Category:Management of Change]][[Has Change Decision::Approved]][[Page author::{{FULLPAGENAME}}]]|format=count}}|50|25|10|5|1|MOCs they worked on approved}}
+{{Wiki Badge|📁|File Uploading|{{#ask:[[Category:Uploads]][[Page creator::{{FULLPAGENAME}}]]|format=count}}|1000|500|250|100|10|files uploaded}}
+{{Wiki Badge|🎫|Ticket Submitting|{{#ask:[[Category:Wiki Ticket]][[Page creator::{{FULLPAGENAME}}]]|format=count}}|50|25|10|5|1|tickets submitted}}
+{{Wiki Badge|⚙|Process Defining|{{#ask:[[Category:Facility Process]][[Page author::{{FULLPAGENAME}}]]|format=count}}|50|25|10|5|1|processes worked on}}
+{{Wiki Badge|🙋‍♀️|Change Requesting|{{#ask:[[Category:Doc CR]][[Doc CR Rqstr::{{FULLPAGENAME}}]]|format=count}}|50|25|10|5|1|changes requested}}
+{{#vardefine:NumBadges|{{#expr:{{#var:Badge1}} + {{#var:Badge2}} + {{#var:Badge3}} + {{#var:Badge4}} + {{#var:Badge5}} + {{#var:Badge6}} + {{#var:Badge7}} + {{#var:Badge8}} + {{#var:Badge9}} + {{#var:Badge10}}}}}}
+<div class="HideMe">[[User Badge Number::{{#var:NumBadges}}]]</div>
+{{#autoedit:form=User
+      |target={{FULLPAGENAME}}
+      |link type=button
+      |link text=Update badge information
+      |query string=User[UserNL]={{#var:UserNL}}&User[UserUsername]={{#var:UserUsername}}&User[UserWorkTitle]={{#var:UserWorkTitle}}&User[UserWorkOrgCode]={{#var:UserWorkOrgCode}}&User[UserWorkCenter]={{#var:UserWorkCenter}}&User[UserWorkCo]={{#var:UserWorkCo}}&User[zNullEdit]=X|reload
+}}
+[[Badge Leaderboard|View the badge leaderboard]] to see how you rank, or [[Badge Categories|view the badge categories]] to learn how to earn more.
+
+{{#ifexist:{{FULLPAGENAME}}/Header
+| <small>''Custom header content contained at: [[{{FULLPAGENAME}}/Header]]''</small>
+----
+{{:{{FULLPAGENAME}}/Header}}
+|}}
+
+= Files / Folders =
+{|
+| style="width:60%;" | {{Embedded File Folder|Files}}
+| style="width:40%;" | {{#ask:
+[[Category: File Folder]]
+[[Page creator::{{FULLPAGENAME}}]]
+|?Uses FileFolderPagePrefix
+|format=template
+|introtemplate=User File Folder Display (Top)
+|template=User File Folder Display (Row)
+|outrotemplate=User File Folder Display (Bot)
+|limit=50
+}}
+|}
+
+= Systems =
+List of [[Main Page/Main Page Systems|'''{{Mediawiki:zSitePrefix}} Systems''']] managed by [[{{FULLPAGENAME}}]].
+{{#ask:[[Category:Facility System]][[Relates to Users::{{FULLPAGENAME}}]]
+|?Has Groupings
+|?Has Full Name
+|?Relates to Users
+|?Has Test Facility
+|?Has Facility System Category
+|?Has Facility System Identifier
+|format=template
+|template=Main Page Systems Table Result (Row)
+|introtemplate=Main Page Systems Table Result (Top)
+|outrotemplate=Main Page Systems Table Result (Bot)
+|link=none
+|sort=Has Groupings,Has Facility System Category,Has Test Facility,Has Full Name
+|order=asc,asc,asc,asc
+|limit=200
+|default=* ''You are not listed as the manager of any {{Mediawiki:zSitePrefix}} systems.''
+}}
+
+= Action Matrix =
+{{Embedded Action Matrix (User)}}
+
+= Formal Tasks =
+==Reviewer==
+''The following actions have been marked as complete and this user is the formal closer''
+
+{{#ask:[[Category:Actionable (Formal)]][[Has Review Chair::{{FULLPAGENAME}}]][[Action status::Open]][[Has Workflow Labels::Label:Complete]]
+|?Assigned to
+|?Related article
+|?Due date
+|?Modification date
+|?Action status
+|?Has Action Type
+|?Has Review Chair
+|format=template
+|template=User Formal Action Result (Row)
+|introtemplate=User Formal Action Result (Top)
+|outrotemplate=User Formal Action Result (Bot)
+|limit=25
+|sort=Modification date
+|order=DESC
+|link=none
+|default=''none''
+}}
+
+
+==Actionee==
+=== Open ===
+{{#ask:[[Category:Actionable (Formal)]][[Assigned to::{{FULLPAGENAME}}]][[Action status::Open]]
+|?Assigned to
+|?Related article
+|?Due date
+|?Modification date
+|?Action status
+|?Has Action Type
+|?Has Review Chair
+|format=template
+|template=User Formal Action Result (Row)
+|introtemplate=User Formal Action Result (Top)
+|outrotemplate=User Formal Action Result (Bot)
+|limit=25
+|sort=Modification date
+|order=DESC
+|link=none
+|default=''none''
+}}
+=== Closed ===
+{{#ask: [[Category:Actionable (Formal)]][[Assigned to::{{FULLPAGENAME}}]][[Action status::Closed]]
+|?Assigned to
+|?Related article
+|?Due date
+|?Modification date
+|?Action status
+|?Has Action Type
+|?Has Review Chair
+|format=template
+|template=User Formal Action Result (Row)
+|introtemplate=User Formal Action Result (Top)
+|outrotemplate=User Formal Action Result (Bot)
+|sort=Modification date
+|order=DESC
+|limit=25
+|link=none
+|default=''none''
+}}
+
+= Notifications =
+{{#formlink:form=Wiki Notification|query string=Wiki Notification[Wiki Notification To]={{#ask:[[{{FULLPAGENAME}}]]|?UserWorkEmail=|link=none|mainlabel=-|limit=1|searchlabel=}}&Wiki Notification[Wiki Notification CC]={{#ask:[[User:{{CURRENTUSER}}]]|?UserWorkEmail=|link=none|mainlabel=-|limit=1|searchlabel=}}&Wiki Notification[Wiki Notification Page]={{FULLPAGENAME}}|link type=button|link text=New notification|popup|reload}}
+
+==Received from Others==
+{{#ask:[[Category:Wiki Notification]][[Wiki Notification To::{{#ask:[[{{FULLPAGENAME}}]]|?UserWorkEmail=|mainlabel=-|link=none}}]][[Wiki Notification From::!{{#replace:{{FULLPAGENAME}}|User:|}}]] OR [[Category:Wiki Notification]][[Wiki Notification CC::{{#ask:[[{{FULLPAGENAME}}]]|?UserWorkEmail=|mainlabel=-|link=none}}]][[Wiki Notification From::!{{#replace:{{FULLPAGENAME}}|User:|}}]]
+|?Wiki Notification Sent=Sent?
+|?Wiki Notification From=From
+|?Wiki Notification Subject=Subject
+|?Wiki Notification To=To
+|?Wiki Notification CC=CC
+|?Wiki Notification Send History
+|?Wiki Notification Bot Edited On
+|?Modification date#LOCL#TO
+|sort=Modification date
+|order=desc
+|format=template
+|link=none
+|template=Wiki Notification Result - Row
+|introtemplate=Wiki Notification Result - Top
+|outrotemplate=Wiki Notification Result - Bot
+}}
+
+==Sent==
+{{#ask:[[Category:Wiki Notification]][[Page creator::{{FULLPAGENAME}}]]
+|?Wiki Notification Sent=Sent?
+|?Wiki Notification From=From
+|?Wiki Notification Subject=Subject
+|?Wiki Notification To=To
+|?Wiki Notification CC=CC
+|?Wiki Notification Send History
+|?Wiki Notification Bot Edited On
+|?Modification date#LOCL#TO
+|sort=Modification date
+|order=desc
+|format=template
+|link=none
+|template=Wiki Notification Result - Row
+|introtemplate=Wiki Notification Result - Top
+|outrotemplate=Wiki Notification Result - Bot
+}}
+
+= MTE =
+==Wiki POC ==
+''The wiki user has indicated that they have an interest in the following MTE''
+{{#ask:[[Category:LTID-ECN]][[Has Wiki POC::{{FULLPAGENAME}}]]
+|?Has LTID-ECN SN
+|?Has LTID-ECN Desc
+|?Has LTID-ECN Model
+|?Has LTID-ECN Cal Date
+|?Has LTID-ECN Cal Due
+|?Has LTID-ECN CPOC
+|?Has Wiki POC
+|format=template
+|introtemplate=LTID-ECN Result - Top
+|template=LTID-ECN Result - Row
+|outrotemplate=LTID-ECN Result - Bot
+|link=none
+|sort=Has LTID-ECN Cal Due
+|order=asc
+|default=<br/>''None. To add MTE to your list, use the [[MTE]] or [[LTID-ECN Search]] pages.''
+|limit=200
+}}
+
+= User Links =
+{| class=zTblATFStd1
+! <small>#</small>
+! <small>Link Name</small>
+! <small>What it does</small>
+! <small>Link (URL)</small>
+|-
+| 1
+| '''Permissions Check '''
+| Shows you data from Launchpad that shows you which wiki roles you are approved for in NAMS
+| https://pbs.grc.nasa.gov/simplesaml/module.php/core/authenticate.php?as=default-sp
+|-
+| 2
+| '''Your Contributions'''
+| Shows you a history of all of the edits you have made in this wiki
+| {{canonicalurl:Special:Contributions/{{PAGENAME}}}}
+|-
+| 3
+| '''Your Uploads'''
+| Shows your file uploads
+| {{canonicalurl:Special:Log|type=upload&user={{PAGENAME}}}}
+|}
+
+= Help =
+{{:Help:User}}
+
+{{{User Tab|}}}
+
+<headertabs/>
+
+{{#css:
+.zUserInfoTbl { width:100%; }
+.zUserInfoTbl tbody tr td:nth-child(1)  { width:10px; white-space:nowrap; background:#eaecf0; padding-left:12px; }
+.zUserInfoTbl tbody tr td:nth-child(2)  { width:10px; white-space:nowrap; background:#f8f9fa; border:1px solid #e0e0e0; }
+.zUserInfoTbl tbody tr td:nth-child(4)  { width:10px; white-space:nowrap; background:#eaecf0; padding-left:12px; }
+.zUserInfoTbl tbody tr td:nth-child(5)  { width:10px; white-space:nowrap; background:#f8f9fa; border:1px solid #e0e0e0; }
+.zUserInfoTbl tbody tr td:nth-child(7)  { width:10px; white-space:nowrap; background:#eaecf0; padding-left:12px; }
+.zUserInfoTbl tbody tr td:nth-child(8)  { width:10px; white-space:nowrap; background:#f8f9fa; border:1px solid #e0e0e0; }
+.zUserInfoTbl tbody tr td:nth-child(10) { width:10px; white-space:nowrap; background:#eaecf0; padding-left:12px; }
+.zUserInfoTbl tbody tr td:nth-child(11) { width:10px; white-space:nowrap; background:#f8f9fa; border:1px solid #e0e0e0; }
+.zUserInfoTbl tbody tr td:nth-child(13) { width:10px; white-space:nowrap; background:#eaecf0; padding-left:12px; }
+.zUserInfoTbl tbody tr td:nth-child(14) { background:#f8f9fa; border:1px solid #e0e0e0; }
+.zUserInfoTbl tbody tr td:nth-child(16) { min-width:400px; border:1px solid #e0e0e0; }
+
+.zTblUser { border:1px solid var(--zSiteColorBg1); margin-bottom:12px; }
+.zTblUser th { padding:3px 6px 3px 6px; border-bottom:1px solid #000; background-color:var(--zSiteColorBg1); color:#fff; }
+.zTblUser td { padding:3px 6px 3px 6px; }
+.zTblUser tr:nth-child(odd)  { background-color:#f8f8f8; }
+.zTblUser tr:nth-child(even) { background-color:#e8e8e8; }
+.zTblUser tr:hover td { background-color:#ffffc0; }
+}}
+
+
+{{#ifeq:{{#var:UserIdentityStatus}}|Terminated
+|[[Category:Terminated User]] 
+|[[Category:Active User]]
+}}
+[[Category:User]]
+[[Category:{{#var:UserWorkCo}}]]
+[[Category:{{#var:UserWorkCenter}}]]
+{{#ifeq:{{#var:UserWorkCenter}}|GRC|[[Category:NASA GRC Code {{#var:UserWorkOrg}}]][[Category:NASA GRC Code {{#var:UserWorkOrg2}}]][[Category:NASA GRC Code {{#var:UserWorkOrg3}}]][[Category:NASA GRC {{#var:UserWorkOrgCode }}]]|}}
+{{#ifeq:{{#ask:[[Category:User Role]][[User Role Assignment Is::{{FULLPAGENAME}}]]|format=count}}
+|0
+|
+|[[Category:{{#ask:[[Category:User Role]][[User Role Assignment Is::{{FULLPAGENAME}}]]|?User Role For Team=|mainlabel=-|link=none}}]][[Category:{{#ask:[[Category:User Role]][[User Role Assignment Is::{{FULLPAGENAME}}]]|?User Role Has Classification=|mainlabel=-|link=none}}]]
+}}
+{{NoEdit}}{{NoVedit}} __NOTOC__
+</includeonly><noinclude>
+{{zToolCheck|Tool - User}}
+</noinclude>

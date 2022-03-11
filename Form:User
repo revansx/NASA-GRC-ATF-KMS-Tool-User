@@ -1,0 +1,36 @@
+<noinclude>
+* This is the "User" form.
+* Use this form to edit the user properties of a user page.
+</noinclude><includeonly>
+<div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+{{H1|User Info}}
+<div style="background-color:#f8f9fa;padding:12px;border:1px solid #808080;">
+These can not be modified by the user form.
+</div>
+{{{for template|User}}}
+<div class="HideMe">
+{{{field|zNullEdit}}}
+{{{field|UserNL}}}
+{{{field|UserUsername}}}
+{{{field|UserWorkTitle}}}
+{{{field|UserWorkOrgCode}}}
+{{{field|UserWorkCenter}}}
+{{{field|UserWorkCo}}}
+</div>
+
+Title: {{{field|User Title|input type=text|size=100}}}
+
+Quote: {{{field|User Quote|input type=text|size=100}}}
+
+{{{field|User Tab|holds template}}}
+
+{{{end template}}}
+
+{{{for template|User Tab|label=User Tab|multiple|embed in field=User[User Tab]}}}
+{{{field|User Tab Name|input type=text|}}}
+{{{end template}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+</includeonly><noinclude>
+{{zToolCheck|Tool - User}}
+</noinclude>

@@ -1,0 +1,23 @@
+<noinclude>
+{|
+!
+</noinclude>
+|-
+| style="white-space:nowrap;" | {{#formlink:form=Actionable (Formal)|target={{{1|}}}|link type=button|link text={{#counter:ActionNumber{{#var:zTblUserCount}}}} 📝|returnto={{FULLPAGENAME}}|reload}}
+| style="white-space:nowrap;" | {{#time:Y-m-d|{{{5|}}}}}
+| style="width:400px;" | [[{{{1|error}}}]]
+| {{#arraymap:{{{2|error}}}|,|@@@@|*[[@@@@|{{#ask:[[@@@@]]|?UserLN=|mainlabel=-|link=none|default=error}}]]|\n}}
+| [[{{{8|error}}}|{{#ask:[[{{{8|error}}}]]|?UserLN=|mainlabel=-|link=none|default=error}}]]
+| style="width:400px;" | {{#arraymap:{{{3|}}}
+|,
+|@@@@
+|{{#if:{{#ask:[[@@@@]]|?Has Title=|mainlabel=-}}
+   |*[[@@@@|@@@@<br/>{{#ask:[[@@@@]]|?Has Title=|mainlabel=-|default=error}}]]
+   |*[[@@@@]]
+   }}
+|\n}}
+| style="white-space:nowrap;" | {{#time:Y-m-d|{{{4|1900-01-01}}}}}
+<noinclude>
+|}
+{{zToolCheck|Tool - User}}
+</noinclude>

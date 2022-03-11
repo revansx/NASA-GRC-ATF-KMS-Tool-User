@@ -1,0 +1,16 @@
+<noinclude>
+{|
+!
+</noinclude>
+|-
+| style="white-space:nowrap;" | {{#formlink:form=Actionable (Standard)|target={{{1|}}}|link type=button|link text={{#counter:ActionNumber{{#var:zTblUserCount}}}} 📝|returnto={{FULLPAGENAME}}|reload}}
+| style="white-space:nowrap;" | {{#time:Y-m-d|{{{5|}}}}}
+| style="width:400px;" | [[{{{1|}}}]]
+| {{#arraymap:{{{2|}}}|,|@@@@|*[[@@@@|{{#ask:[[@@@@]]|?UserLN=|mainlabel=-|link=none}}]]|\n}}
+| style="width:400px;" | {{#arraymap:{{{3|}}}|,|@@@@|*[[@@@@]]|\n}}
+| style="white-space:nowrap;" | {{#time:Y-m-d|{{{4|}}}}}
+| {{#autoedit:form=Actionable (Standard)|target={{{1|}}}|link type=button|link text={{#ifeq:{{{6|}}}|Open|CLOSE|OPEN}}|query string=Actionable (Standard)[ACTION_STATUS]={{#ifeq:{{{6|}}}|Open|Closed|Open}}|reload}}
+<noinclude>
+|}
+{{zToolCheck|Tool - User}}
+</noinclude>

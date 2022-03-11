@@ -1,0 +1,14 @@
+{| class="zTblUser sortable" id=zTblUser{{#counter:zTblUserCount}}
+! #
+! Page
+! Subject
+! From
+! To
+! CC
+! Created on
+<noinclude>
+|-
+|
+|}
+{{zToolCheck|Tool - User}}
+</noinclude>

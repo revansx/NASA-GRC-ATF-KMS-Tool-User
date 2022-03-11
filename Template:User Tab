@@ -1,0 +1,18 @@
+= {{{User Tab Name|}}} =
+<div style="float:right" class=zDivNoExternalLinkImg>{{#widget:WikiLink
+|zWiki={{SCRIPTPATH}}
+|zPage={{FULLPAGENAME}}/{{{User Tab Name|}}}
+|zVar1=veaction
+|zVal1=edit
+|zText=&#128221;
+}}
+</div>
+
+{{#ifexist:{{FULLPAGENAME}}/{{{User Tab Name|}}}
+|{{:{{FULLPAGENAME}}/{{{User Tab Name|}}}}}
+|This page has not yet been created. Click [[{{FULLPAGENAME}}/{{{User Tab Name|}}}|'''HERE''']] to create the {{{User Tab Name|}}} page for this user.
+}}
+
+<noinclude>
+{{zToolCheck|Tool - User}}
+</noinclude>

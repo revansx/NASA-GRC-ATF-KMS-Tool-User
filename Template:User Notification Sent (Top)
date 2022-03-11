@@ -1,0 +1,13 @@
+{| class="zTblUser sortable" id=zTblUser{{#counter:zTblNotificationSentCount}}
+! #
+! Page
+! Subject
+! To
+! CC
+! Created on
+<noinclude>
+|-
+|
+|}
+{{zToolCheck|Tool - User}}
+</noinclude>

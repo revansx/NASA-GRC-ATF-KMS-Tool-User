@@ -1,0 +1,34 @@
+<noinclude>
+* This is the "File Folder" form.
+</noinclude><includeonly>
+{{{for template|File Folder}}}{{{info|page name=<File Folder[Requested New Subpage Basepage]>/<File Folder[Requested New Subpage PageName]>}}}
+
+{{{field|Requested New Subpage Basepage|input type=text|mandatory|restricted}}}/{{{field|Requested New Subpage PageName|input type=text|mandatory|restricted}}}
+
+<div class=HideMe>
+{{{field|Relates to Program Owner|input type=text|restricted}}}
+{{{field|Relates to Program Element|input type=text|restricted}}}
+{{{field|Relates to Facility Program|input type=text|restricted}}}
+{{{field|Relates to Facility Test|input type=text|restricted}}}
+{{{field|Relates to Facility Record Type|input type=text|restricted}}}
+{{{field|Relates to Center|input type=text|restricted}}}
+{{{field|Relates to Campus|input type=text|restricted}}}
+{{{field|Relates to Test Complex|input type=text|restricted}}}
+{{{field|Relates to Test Facility|input type=text|restricted}}}
+{{{field|Relates to Facility System|input type=text|restricted}}}
+{{{field|Relates to Facility Element|input type=text|restricted}}}
+</div>
+
+{| class="zTbl"
+|-
+! Is Protected: 
+| {{{field|Is Protected|input type=radiobutton|values=Yes,No|default=No|mandatory}}}
+|}
+{{{end template}}}
+
+{{{standard input|save}}} -OR- {{{standard input|cancel}}}
+</includeonly><noinclude>
+[[Category:KMS Core]]
+[[Category:Tool - User]]
+[[Category:Tool - File Folder]]
+</noinclude>

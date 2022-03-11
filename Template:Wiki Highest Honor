@@ -1,0 +1,3 @@
+'''{{#ifeq:{{FULLPAGENAME}}|{{{1|}}}|<big>⭐</big> [[{{{1|}}}]] has the most wiki badges on this site!|The highest badge count is {{{2|}}} held by [[{{{1|}}}]]. Earn {{#expr:{{{2|}}} - {{#ask:[[{{FULLPAGENAME}}]]|?User Badge Number=|mainlabel=-|link=none}} + 1}} more badges to take the lead!}}'''<noinclude>
+{{zToolCheck|Tool - User}}
+</noinclude>

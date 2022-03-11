@@ -1,0 +1,10 @@
+{| class="zTblUser sortable" id=zTblUser{{#counter:zTblFileFolderCount}}
+! #
+! Folders created by {{#ask:[[{{FULLPAGENAME}}]]|?UserNL=|mainlabel=-|link=none}}
+! Prefix
+<noinclude>
+|-
+|
+|}
+{{zToolCheck|Tool - User}}
+</noinclude>

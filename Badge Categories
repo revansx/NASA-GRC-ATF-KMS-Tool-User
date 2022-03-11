@@ -1,0 +1,104 @@
+The following categories are ways in which to earn wiki badges. [[User:{{CURRENTUSER}}|Visit your user page]] to see your earned badges, and [[Badge Leaderboard|visit the leaderboard]] to see how you rank on this site.
+{| class="zTblBadge sortable" id=zTblBadge{{#counter:zTblBadge}}
+|+
+!Category
+!Icon
+!Tier 1
+!Tier 2
+!Tier 3
+!Tier 4
+!Tier 5
+|-
+|Process Defining
+|⚙
+|1
+|5
+|10
+|25
+|50
+|-
+|NC Dispositioning
+|🛠
+|1
+|5
+|10
+|25
+|50
+|-
+|MOC Approving
+|👩‍💼
+|1
+|5
+|10
+|25
+|50
+|-
+|Ticket Submitting
+|🎫
+|1
+|5
+|10
+|25
+|50
+|-
+|Change Requesting
+|🙋‍♀️
+|1
+|5
+|10
+|25
+|50
+|-
+|Kudos Earning
+|🦸‍♂️
+|1
+|5
+|25
+|100
+|250
+|-
+|Page Producing
+|🆕
+|10
+|100
+|250
+|500
+|1000
+|-
+|Action Closing
+|🎬
+|10
+|100
+|250
+|500
+|1000
+|-
+|Notification Sending
+|📧
+|10
+|100
+|250
+|500
+|1000
+|-
+|File Uploading
+|📁
+|10
+|100
+|250
+|500
+|1000
+|}
+
+If there are more categories you think should be added, or you think the tiers should change, {{#formlink:form=Wiki Ticket|link type=text|link text=submit a ticket|returnto={{FULLPAGENAME}}|}} (It'll count towards a badge!)
+
+{{#css:
+.zTblBadge { border:1px solid var(--zColorBg1); margin-bottom:12px; width:50%; }
+.zTblBadge th { padding:3px 6px 3px 6px; border-bottom:1px solid #000; background-color:var(--zColorBg1); color:#fff; }
+.zTblBadge td { padding:3px 6px 3px 6px; }
+.zTblBadge tr:nth-child(odd)  { background-color:#f8f8f8; }
+.zTblBadge tr:nth-child(even) { background-color:#e8e8e8; }
+.zTblBadge tr:hover td { background-color:#ffffc0; }
+}}<noinclude>
+{{zToolCheck|Tool - User}}
+</noinclude>

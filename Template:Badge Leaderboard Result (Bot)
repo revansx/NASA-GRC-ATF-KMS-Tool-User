@@ -1,0 +1,18 @@
+<noinclude>{| class="zTblLeaderboard sortable" id=zTblLeaderboard{{#counter:zTblLeaderboardCount}}
+|-
+| {{#vardefineecho:RankCount|{{#counter:Rank}}}} {{#ifeq:{{#var:RankCount}}|1|⭐⭐⭐|{{#ifeq:{{#var:RankCount}}|2|⭐⭐|{{#ifeq:{{#var:RankCount}}|3|⭐|}}}}}}
+| {{{1|}}}
+| {{{2|}}}
+</noinclude>
+|}
+{{#css:
+.zTblLeaderboard { border:1px solid var(--zSiteColorBg1); margin-bottom:12px; width:50%; }
+.zTblLeaderboard th { padding:3px 6px 3px 6px; border-bottom:1px solid #000; background-color:var(--zSiteColorBg1); color:#fff; }
+.zTblLeaderboard td { padding:3px 6px 3px 6px; }
+.zTblLeaderboard tr:nth-child(odd)  { background-color:#f8f8f8; }
+.zTblLeaderboard tr:nth-child(even) { background-color:#e8e8e8; }
+.zTblLeaderboard tr:hover td { background-color:#ffffc0; }
+}}
+<noinclude>
+{{zToolCheck|Tool - User}}
+</noinclude>

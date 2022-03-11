@@ -1,0 +1,13 @@
+<noinclude>{| class="zTblLeaderboard sortable" id=zTblLeaderboard{{#counter:zTblLeaderboardCount}}
+!
+|-
+</noinclude>
+| {{#vardefineecho:RankCount|{{#counter:Rank}}}} {{#ifeq:{{#var:RankCount}}|1|⭐⭐⭐|{{#ifeq:{{#var:RankCount}}|2|⭐⭐|{{#ifeq:{{#var:RankCount}}|3|⭐|}}}}}}
+| {{{1|}}}
+| {{{2|}}}
+|-
+<noinclude>
+|}
+</noinclude><noinclude>
+{{zToolCheck|Tool - User}}
+</noinclude>

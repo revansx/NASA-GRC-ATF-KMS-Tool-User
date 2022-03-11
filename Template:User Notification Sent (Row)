@@ -1,0 +1,15 @@
+<noinclude>
+{|
+!
+</noinclude>
+|-
+| {{#counter:UserSentNum}}
+| [[{{{1|}}}|{{#replace:{{{1|}}}|{{Mediawiki:zSitePrefix}}-Wiki-Notification-|}}]]
+| {{{2|}}}
+| {{{3|}}}
+| {{{4|}}}
+| {{{5|}}}
+<noinclude>
+|}
+{{zToolCheck|Tool - User}}
+</noinclude>

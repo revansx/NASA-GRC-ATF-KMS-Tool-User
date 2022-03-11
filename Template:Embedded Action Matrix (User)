@@ -1,0 +1,113 @@
+{| class="zTblATFstdx" style="width:100%;"
+|- class=RowIsNewGroup
+! colspan=4 style="padding:9px 9px 9px 24px;" |<div style="float:right;">
+{|
+| style="vertical-align:middle;" | <span style="color:#fff;">'''Legend:'''
+| style="vertical-align:middle;" | <span style="border:1px solid #fff;border-radius:9px;padding:3px 6px 3px 6px;background-color:#f0f0f0;"><span style="color:#d00000;">&#11044;</span> Submitted</span>
+| style="vertical-align:middle;" | <span style="border:1px solid #fff;border-radius:9px;padding:3px 6px 3px 6px;background-color:#f0f0f0;"><span style="color:#f0f000;">&#11044;</span> In-Progress</span>
+| style="vertical-align:middle;" | <span style="border:1px solid #fff;border-radius:9px;padding:3px 6px 3px 6px;background-color:#f0f0f0;"><span style="color:#00d000;">&#11044;</span> Complete</span>
+|}
+</div><big>'''Action Management Matrix'''</big> {{#info: The Priority-Demand matrix is a variation of the [https://en.wikipedia.org/wiki/MoSCoW_method ''MoSCoW'' approach] to product requirement prioritization in development environments that have defined intervals of delivery. 
+
+The term MoSCoW itself is just an acronym derived from the first letter of each of four prioritization categories: 
+* M - Must have
+* S - Should have
+* C - Could have
+* W - Won't have 
+
+Because we use a [https://en.wikipedia.org/wiki/DevOps DevOps approach] to product development, we use ''deployment events'' as the definition of the timebox for each tool. In our version (which we call MSL), we have replaced '''Could''' with '''Like''' and are not using '''Won't''' at all. These terms, ''Must'', ''Should'', and ''Like'' are then defined in the context of of the [https://en.wikipedia.org/wiki/Timeboxing ''timebox''] that defines the release of the next product revision. |note}}
+|- class=RowIsNewGroupColHeader
+! style="width: 4%;text-align:center; padding:2px 6px 2px 6px;" | <big>'''Priority'''</big>
+! style="width:32%;text-align:center; border:1px solid #000;" | <big>'''Must'''</big> {{#info: '''Must''' - Requirements labelled as ''Must'' are critical to the current delivery timebox in order for it to be a success. If even one Must have requirement is not included, the project delivery should be considered a failure (note: requirements can be downgraded from Must have, by agreement with all relevant stakeholders; for example, when new requirements are deemed more important). MUST can also be considered an acronym for the Minimum Usable Subset. |note}}
+! style="width:32%;text-align:center; border:1px solid #000;" | <big>'''Should'''</big> {{#info: '''Should''' - Requirements labelled as ''Should'' are important but not necessary for delivery in the current delivery timebox. While Should have requirements can be as important as Must have, they are often not as time-critical or there may be another way to satisfy the requirement so that it can be held back until a future delivery timebox. |note}}
+! style="width:32%;text-align:center; border:1px solid #000;" | <big>'''Like'''</big> {{#info: '''Like''' - Requirements labelled as ''Like'' are desirable but not necessary and could improve the user experience or customer satisfaction for a little development cost. These will typically be included if time and resources permit. |note}}
+|-
+| style="text-align:center; border:1px solid #aaa;background-color:#f8f8f8; color:#666;" | '''<big><big>1</big></big>'''
+| style="border:1px solid #aaa;padding:0px;background-color:#f8f8f8;" | {{#ask:[[Category:Actionable]][[Action status::Open]][[Has Priority Label::Label:Priority 1]][[Has Demand Label::Label:Must]][[Assigned to::{{FULLPAGENAME}}]]|format=template|template=Action Matrix - Result Item|link=none|introtemplate=Action Matrix - Result Item (Top)|outrotemplate=Action Matrix - Result Item (Bot)|limit=15}}
+| style="border:1px solid #aaa;padding:0px;background-color:#f8f8f8;" | {{#ask:[[Category:Actionable]][[Action status::Open]][[Has Priority Label::Label:Priority 1]][[Has Demand Label::Label:Should]][[Assigned to::{{FULLPAGENAME}}]]|format=template|template=Action Matrix - Result Item|link=none|introtemplate=Action Matrix - Result Item (Top)|outrotemplate=Action Matrix - Result Item (Bot)|limit=15}}
+| style="border:1px solid #aaa;padding:0px;background-color:#f8f8f8;" | {{#ask:[[Category:Actionable]][[Action status::Open]][[Has Priority Label::Label:Priority 1]][[Has Demand Label::Label:Like]][[Related article::{{FULLPAGENAME}}{{#arraymap:{{{1|}}}|,|@@@@|{{!}}{{!}}@@@@|}}]]|format=template|template=Action Matrix - Result Item|link=none|introtemplate=Action Matrix - Result Item (Top)|outrotemplate=Action Matrix - Result Item (Bot)|limit=15}}
+|- style="background-color:#f0f0f0;"
+| style="text-align:center; border:1px solid #aaa;background-color:#f0f0f0; color:#666;" | '''<big><big>2</big></big>'''
+| style="border:1px solid #aaa;padding:0px;background-color:#f0f0f0;" | {{#ask:[[Category:Actionable]][[Action status::Open]][[Has Priority Label::Label:Priority 2]][[Has Demand Label::Label:Must]][[Assigned to::{{FULLPAGENAME}}]]|format=template|template=Action Matrix - Result Item|link=none|introtemplate=Action Matrix - Result Item (Top)|outrotemplate=Action Matrix - Result Item (Bot)|limit=15}}
+| style="border:1px solid #aaa;padding:0px;background-color:#f0f0f0;" | {{#ask:[[Category:Actionable]][[Action status::Open]][[Has Priority Label::Label:Priority 2]][[Has Demand Label::Label:Should]][[Assigned to::{{FULLPAGENAME}}]]|format=template|template=Action Matrix - Result Item|link=none|introtemplate=Action Matrix - Result Item (Top)|outrotemplate=Action Matrix - Result Item (Bot)|limit=15}}
+| style="border:1px solid #aaa;padding:0px;background-color:#f0f0f0;" | {{#ask:[[Category:Actionable]][[Action status::Open]][[Has Priority Label::Label:Priority 2]][[Has Demand Label::Label:Like]][[Assigned to::{{FULLPAGENAME}}]]|format=template|template=Action Matrix - Result Item|link=none|introtemplate=Action Matrix - Result Item (Top)|outrotemplate=Action Matrix - Result Item (Bot)|limit=15}}
+|-
+| style="text-align:center; border:1px solid #aaa;background-color:#f8f8f8; color:#666;" | '''<big><big>3</big></big>'''
+| style="border:1px solid #aaa;padding:0px;background-color:#f8f8f8;" | {{#ask:[[Category:Actionable]][[Action status::Open]][[Has Priority Label::Label:Priority 3]][[Has Demand Label::Label:Must]][[Assigned to::{{FULLPAGENAME}}]]|format=template|template=Action Matrix - Result Item|link=none|introtemplate=Action Matrix - Result Item (Top)|outrotemplate=Action Matrix - Result Item (Bot)|limit=15}}
+| style="border:1px solid #aaa;padding:0px;background-color:#f8f8f8;" | {{#ask:[[Category:Actionable]][[Action status::Open]][[Has Priority Label::Label:Priority 3]][[Has Demand Label::Label:Should]][[Assigned to::{{FULLPAGENAME}}]]|format=template|template=Action Matrix - Result Item|link=none|introtemplate=Action Matrix - Result Item (Top)|outrotemplate=Action Matrix - Result Item (Bot)|limit=15}}
+| style="border:1px solid #aaa;padding:0px;background-color:#f8f8f8;" | {{#ask:[[Category:Actionable]][[Action status::Open]][[Has Priority Label::Label:Priority 3]][[Has Demand Label::Label:Like]][[Assigned to::{{FULLPAGENAME}}]]|format=template|template=Action Matrix - Result Item|link=none|introtemplate=Action Matrix - Result Item (Top)|outrotemplate=Action Matrix - Result Item (Bot)|limit=15}}
+|- 
+| style="width: 4%; border:1px solid #aaa;text-align:center;background-color:#f0f0f0; color:#666;" | <big>'''New'''</big>
+| style="border:1px solid #aaa;background-color:#f0f0f0;" |   
+{| style="margin:auto; background-color:none;"
+|{{#formlink:form=Actionable (Standard)|link type=button|link text=P1:Must|query string=Actionable (Standard)[Has Demand Label]=Label:Must&Actionable (Standard)[Has Priority Label]=Label:Priority 1&Actionable (Standard)[ASSIGNED_TO]=User:{{CURRENTUSER}}&Actionable (Standard)[ASSIGNED_TO]={{FULLPAGENAME}}|returnto={{FULLPAGENAME}}|reload}}
+|{{#formlink:form=Actionable (Standard)|link type=button|link text=P2:Must|query string=Actionable (Standard)[Has Demand Label]=Label:Must&Actionable (Standard)[Has Priority Label]=Label:Priority 2&Actionable (Standard)[ASSIGNED_TO]=User:{{CURRENTUSER}}&Actionable (Standard)[ASSIGNED_TO]={{FULLPAGENAME}}|returnto={{FULLPAGENAME}}|reload}}
+|{{#formlink:form=Actionable (Standard)|link type=button|link text=P3:Must|query string=Actionable (Standard)[Has Demand Label]=Label:Must&Actionable (Standard)[Has Priority Label]=Label:Priority 3&Actionable (Standard)[ASSIGNED_TO]=User:{{CURRENTUSER}}&Actionable (Standard)[ASSIGNED_TO]={{FULLPAGENAME}}|returnto={{FULLPAGENAME}}|reload}}
+|}
+| style="border:1px solid #aaa;background-color:#f0f0f0;" |   
+{| style="margin:auto; background-color:transparent;"
+|{{#formlink:form=Actionable (Standard)|link type=button|link text=P1:Should|query string=Actionable (Standard)[Has Demand Label]=Label:Should&Actionable (Standard)[Has Priority Label]=Label:Priority 1&Actionable (Standard)[ASSIGNED_TO]=User:{{CURRENTUSER}}&Actionable (Standard)[ASSIGNED_TO]={{FULLPAGENAME}}|returnto={{FULLPAGENAME}}|reload}}
+|{{#formlink:form=Actionable (Standard)|link type=button|link text=P2:Should|query string=Actionable (Standard)[Has Demand Label]=Label:Should&Actionable (Standard)[Has Priority Label]=Label:Priority 2&Actionable (Standard)[ASSIGNED_TO]=User:{{CURRENTUSER}}&Actionable (Standard)[ASSIGNED_TO]={{FULLPAGENAME}}|returnto={{FULLPAGENAME}}|reload}}
+|{{#formlink:form=Actionable (Standard)|link type=button|link text=P3:Should|query string=Actionable (Standard)[Has Demand Label]=Label:Should&Actionable (Standard)[Has Priority Label]=Label:Priority 3&Actionable (Standard)[ASSIGNED_TO]=User:{{CURRENTUSER}}&Actionable (Standard)[ASSIGNED_TO]={{FULLPAGENAME}}|returnto={{FULLPAGENAME}}|reload}}
+|}
+| style="border:1px solid #aaa;background-color:#f0f0f0;" |   
+{| style="margin:auto; background-color:transparent;"
+|{{#formlink:form=Actionable (Standard)|link type=button|link text=P1:Like|query string=Actionable (Standard)[Has Demand Label]=Label:Like&Actionable (Standard)[Has Priority Label]=Label:Priority 1&Actionable (Standard)[ASSIGNED_TO]=User:{{CURRENTUSER}}&Actionable (Standard)[ASSIGNED_TO]={{FULLPAGENAME}}|returnto={{FULLPAGENAME}}|reload}}
+|{{#formlink:form=Actionable (Standard)|link type=button|link text=P2:Like|query string=Actionable (Standard)[Has Demand Label]=Label:Like&Actionable (Standard)[Has Priority Label]=Label:Priority 2&Actionable (Standard)[ASSIGNED_TO]=User:{{CURRENTUSER}}&Actionable (Standard)[ASSIGNED_TO]={{FULLPAGENAME}}|returnto={{FULLPAGENAME}}|reload}}
+|{{#formlink:form=Actionable (Standard)|link type=button|link text=P3:Like|query string=Actionable (Standard)[Has Demand Label]=Label:Like&Actionable (Standard)[Has Priority Label]=Label:Priority 3&Actionable (Standard)[ASSIGNED_TO]=User:{{CURRENTUSER}}&Actionable (Standard)[ASSIGNED_TO]={{FULLPAGENAME}}|returnto={{FULLPAGENAME}}|reload}}
+|}
+|}
+
+{{#vardefine:zTblCaption|Recent changes to OPEN actions}}
+{{#ask:[[Category:Actionable]][[Assigned to::{{FULLPAGENAME}}{{#arraymap:{{{1|}}}|,|@@@@|{{!}}{{!}}@@@@|}}]][[Action status::Open]]
+|mainlabel=Action
+|?Modification date
+|?Last editor is
+|?Has Priority Label
+|?Has Demand Label
+|?Action status
+|?Has Workflow Labels
+|?Related article
+|?Assigned to
+|format=template
+|template=Action Matrix - Edit History (Row)
+|introtemplate=Action Matrix - Edit History (Top)
+|outrotemplate=Action Matrix - Edit History (Bot)
+|limit=50
+|sort=Modification date
+|order=desc
+|link=none
+}}
+
+{{#vardefine:zTblCaption|Recent changes to CLOSED actions}}
+{{#ask:[[Category:Actionable]][[Assigned to::{{FULLPAGENAME}}{{#arraymap:{{{1|}}}|,|@@@@|{{!}}{{!}}@@@@|}}]][[Action status::!Open]]
+|mainlabel=Action
+|?Modification date
+|?Last editor is
+|?Has Priority Label
+|?Has Demand Label
+|?Action status
+|?Has Workflow Labels
+|?Related article
+|?Assigned to
+|format=template
+|template=Action Matrix - Edit History (Row)
+|introtemplate=Action Matrix - Edit History (Top)
+|outrotemplate=Action Matrix - Edit History (Bot)
+|limit=50
+|sort=Modification date
+|order=desc
+|link=none
+}}
+{{#css:
+.zTblATFstdx { border-collapse: collapse; }
+.zTblATFstdx th { border-bottom:1px solid #000; background-color:var(--zSiteColorBg1); color:#fff; }
+.zTblATFstdx tr.RowIsNewGroup           th { background-color:var(--zSiteColorBg1); color:#f8f8f8; padding-top:9px; border-radius:9px 9px 0px 0px; margin-top:12px;}
+.zTblATFstdx tr.RowIsNewGroupColHeader  th { background-color:#c8c8d0; color:#666; }
+.zTblATFstdx tr.RowIsNewGroupSpace      th { background-color:#ffff; border-bottom:none!important; } 
+.zTblATFstdx { border-spacing:0px; }
+.zTblATFstdy td { background-color:#f8f8f8; }
+}}
+<noinclude>
+{{zToolCheck|Tool - User}}
+</noinclude>

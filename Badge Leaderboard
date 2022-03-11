@@ -1,0 +1,13 @@
+[[User:{{CURRENTUSER}}|Visit your user page]] to see your earned badges, and [[Badge Categories|visit the badge categories]] to see how you can earn more badges.
+{{#ask:[[Category:User]][[User Badge Number::>>0]]|?User Badge Number=Badges
+|sort=User Badge Number
+|order=DESC
+|limit=500
+|format=template
+|introtemplate=Badge Leaderboard Result (Top)
+|template=Badge Leaderboard Result (Row)
+|outrotemplate=Badge Leaderboard Result (Bot)
+}}
+<noinclude>
+{{zToolCheck|Tool - User}}
+</noinclude>

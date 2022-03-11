@@ -1,0 +1,13 @@
+{| class="zTblUser sortable" id={{#vardefineecho:zTblUserCount|zTblUser{{#counter:zTblUserCount}}}}
+! style="white-space:nowrap;" | # edit
+! Modified
+! Title
+! Assigned to
+! Related article
+! Due
+! Close<noinclude>
+|-
+|
+|}
+{{zToolCheck|Tool - User}}
+</noinclude>
